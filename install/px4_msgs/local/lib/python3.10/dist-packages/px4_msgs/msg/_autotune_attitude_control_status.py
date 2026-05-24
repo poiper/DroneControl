@@ -1,0 +1,1 @@
+/home/ywt/FlyControl/ros2_fc/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status.py

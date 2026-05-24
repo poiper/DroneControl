@@ -1,0 +1,1 @@
+/home/ywt/FlyControl/ros2_fc/src/drone_control/launch/px4_gazebo.py

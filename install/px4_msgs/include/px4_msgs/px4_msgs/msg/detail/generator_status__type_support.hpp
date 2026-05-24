@@ -1,0 +1,1 @@
+/home/ywt/FlyControl/ros2_fc/build/px4_msgs/rosidl_generator_cpp/px4_msgs/msg/detail/generator_status__type_support.hpp

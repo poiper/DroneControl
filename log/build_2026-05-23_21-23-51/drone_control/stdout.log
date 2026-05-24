@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing drone_control.egg-info/PKG-INFO
+writing dependency_links to drone_control.egg-info/dependency_links.txt
+writing entry points to drone_control.egg-info/entry_points.txt
+writing requirements to drone_control.egg-info/requires.txt
+writing top-level names to drone_control.egg-info/top_level.txt
+reading manifest file 'drone_control.egg-info/SOURCES.txt'
+writing manifest file 'drone_control.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages/drone-control.egg-link (link to .)
+Installing drone_state_monitor script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+Installing gazebo_sim_interface script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+Installing px4_offboard script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+Installing talker script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+
+Installed /home/ywt/FlyControl/ros2_fc/build/drone_control
+running symlink_data

@@ -1,0 +1,1 @@
+/home/ywt/FlyControl/ros2_fc/src/px4_msgs/msg/GimbalDeviceSetAttitude.msg

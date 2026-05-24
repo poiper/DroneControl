@@ -1,0 +1,50 @@
+# PX4 SITL配置文件
+# 用于ROS2 Humble仿真环境
+
+## 通信配置
+sitl_udp_port: 18570  # PX4 SITL UDP端口
+ros_namespace: drone_0  # ROS命名空间
+
+## 飞行器配置
+vehicle_type: quadrotor  # 飞行器类型
+vehicle_model: iris  # 飞行器模型
+
+## 传感器配置
+gps:
+  enabled: true
+  lat0: 47.397742
+  lon0: 8.545594
+  alt0: 488
+  
+imu:
+  enabled: true
+  update_rate: 250  # Hz
+
+mag:
+  enabled: true
+  
+baro:
+  enabled: true
+
+## 执行器配置
+motors:
+  num_motors: 4
+  motor_model: iris
+  
+## 控制配置
+control_mode: offboard  # offboard模式用于ROS2控制
+max_roll: 45.0  # 度
+max_pitch: 45.0  # 度
+max_yaw_rate: 90.0  # 度/秒
+max_climb_rate: 5.0  # m/s
+
+## 仿真配置
+simulation:
+  real_time_factor: 1.0
+  time_scale: 1.0
+  enable_ground_truth: true
+  
+## 调试配置
+debug:
+  verbose: false
+  log_level: INFO

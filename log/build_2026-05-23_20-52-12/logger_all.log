@@ -1,0 +1,209 @@
+[0.723s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.723s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7c7cbfb5d0c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7c7cbfb5cc70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7c7cbfb5cc70>>)
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.201s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ywt/FlyControl/ros2_fc'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extensions ['ignore', 'ignore_ament_install']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extension 'ignore'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extension 'ignore_ament_install'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extensions ['colcon_pkg']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extension 'colcon_pkg'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extensions ['colcon_meta']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extension 'colcon_meta'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extensions ['ros']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_control) by extension 'ros'
+[1.232s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_control' with type 'ros.ament_python' and name 'drone_control'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[1.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[1.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.290s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.291s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.292s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ywt/FlyControl/ros2_fc/install
+[1.295s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 319 installed packages in /opt/ros/humble
+[1.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.369s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.370s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.370s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywt/FlyControl/ros2_fc/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywt/FlyControl/ros2_fc/install/px4_msgs', 'merge_install': False, 'path': '/home/ywt/FlyControl/ros2_fc/src/px4_msgs', 'symlink_install': True, 'test_result_base': None}
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_args' from command line to 'None'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_target' from command line to 'None'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_clean_cache' from command line to 'False'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_clean_first' from command line to 'False'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'cmake_force_configure' from command line to 'False'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'ament_cmake_args' from command line to 'None'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'catkin_cmake_args' from command line to 'None'
+[1.371s] Level 5:colcon.colcon_core.verb:set package 'drone_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.371s] DEBUG:colcon.colcon_core.verb:Building package 'drone_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywt/FlyControl/ros2_fc/build/drone_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywt/FlyControl/ros2_fc/install/drone_control', 'merge_install': False, 'path': '/home/ywt/FlyControl/ros2_fc/src/drone_control', 'symlink_install': True, 'test_result_base': None}
+[1.371s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.373s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.373s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywt/FlyControl/ros2_fc/src/px4_msgs' with build type 'ament_cmake'
+[1.374s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywt/FlyControl/ros2_fc/src/px4_msgs'
+[1.382s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.383s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.383s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake /home/ywt/FlyControl/ros2_fc/src/px4_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ywt/FlyControl/ros2_fc/install/px4_msgs
+[17.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake /home/ywt/FlyControl/ros2_fc/src/px4_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ywt/FlyControl/ros2_fc/install/px4_msgs
+[17.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake --build /home/ywt/FlyControl/ros2_fc/build/px4_msgs -- -j32 -l32
+[209.172s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake --build /home/ywt/FlyControl/ros2_fc/build/px4_msgs -- -j32 -l32
+[209.191s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake --install /home/ywt/FlyControl/ros2_fc/build/px4_msgs
+[271.473s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[271.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywt/FlyControl/ros2_fc/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ywt/FlyControl/ros2_fc/install/drone_control:/opt/ros/humble /usr/bin/cmake --install /home/ywt/FlyControl/ros2_fc/build/px4_msgs
+[271.485s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' for CMake module files
+[271.486s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' for CMake config files
+[271.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[271.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[271.490s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[271.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[271.493s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib'
+[271.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[271.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[271.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[271.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[271.496s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/bin'
+[271.496s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[271.496s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib/python3.10/site-packages'
+[271.497s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/bin'
+[271.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.ps1'
+[271.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.dsv'
+[271.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.sh'
+[271.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.bash'
+[271.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.zsh'
+[271.504s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[271.507s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[271.507s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' for CMake module files
+[271.508s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs' for CMake config files
+[271.509s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[271.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[271.511s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[271.511s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[271.512s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib'
+[271.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[271.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[271.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[271.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[271.514s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/bin'
+[271.514s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[271.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib/python3.10/site-packages'
+[271.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/bin'
+[271.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.ps1'
+[271.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.dsv'
+[271.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.sh'
+[271.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.bash'
+[271.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/px4_msgs/package.zsh'
+[271.520s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywt/FlyControl/ros2_fc/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[271.520s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ywt/FlyControl/ros2_fc/src/drone_control' with build type 'ament_python'
+[271.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_control', 'ament_prefix_path')
+[271.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/ament_prefix_path.ps1'
+[271.523s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/ament_prefix_path.dsv'
+[271.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/ament_prefix_path.sh'
+[271.524s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[271.524s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[272.443s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ywt/FlyControl/ros2_fc/src/drone_control'
+[272.443s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[272.444s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[301.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywt/FlyControl/ros2_fc/build/drone_control': PYTHONPATH=/home/ywt/FlyControl/ros2_fc/build/drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ywt/FlyControl/ros2_fc/build/drone_control/build --no-deps symlink_data
+[302.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_control', 'pythonpath_develop')
+[302.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/build/drone_control/share/drone_control/hook/pythonpath_develop.ps1'
+[302.255s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywt/FlyControl/ros2_fc/build/drone_control' returned '0': PYTHONPATH=/home/ywt/FlyControl/ros2_fc/build/drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ywt/FlyControl/ros2_fc/build/drone_control/build --no-deps symlink_data
+[302.257s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/build/drone_control/share/drone_control/hook/pythonpath_develop.dsv'
+[302.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/build/drone_control/share/drone_control/hook/pythonpath_develop.sh'
+[302.259s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control' for CMake module files
+[302.259s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control' for CMake config files
+[302.260s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib'
+[302.261s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control/bin'
+[302.261s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/pkgconfig/drone_control.pc'
+[302.261s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages'
+[302.261s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_control', 'pythonpath')
+[302.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/pythonpath.ps1'
+[302.262s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/pythonpath.dsv'
+[302.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/hook/pythonpath.sh'
+[302.264s] Level 1:colcon.colcon_core.environment:checking '/home/ywt/FlyControl/ros2_fc/install/drone_control/bin'
+[302.264s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_control)
+[302.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/package.ps1'
+[302.265s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/package.dsv'
+[302.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/package.sh'
+[302.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/package.bash'
+[302.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywt/FlyControl/ros2_fc/install/drone_control/share/drone_control/package.zsh'
+[302.269s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywt/FlyControl/ros2_fc/install/drone_control/share/colcon-core/packages/drone_control)
+[302.269s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[302.270s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[302.270s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[302.270s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[302.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[302.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[302.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[302.541s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[302.541s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[302.541s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[302.541s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywt/FlyControl/ros2_fc/install/local_setup.ps1'
+[302.543s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ywt/FlyControl/ros2_fc/install/_local_setup_util_ps1.py'
+[302.545s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywt/FlyControl/ros2_fc/install/setup.ps1'
+[302.547s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywt/FlyControl/ros2_fc/install/local_setup.sh'
+[302.548s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ywt/FlyControl/ros2_fc/install/_local_setup_util_sh.py'
+[302.549s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywt/FlyControl/ros2_fc/install/setup.sh'
+[302.551s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywt/FlyControl/ros2_fc/install/local_setup.bash'
+[302.552s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywt/FlyControl/ros2_fc/install/setup.bash'
+[302.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywt/FlyControl/ros2_fc/install/local_setup.zsh'
+[302.555s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywt/FlyControl/ros2_fc/install/setup.zsh'

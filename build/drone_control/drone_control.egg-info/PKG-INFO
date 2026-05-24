@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: drone-control
+Version: 0.0.1
+Summary: ROS2虚拟无人机控制系统，支持PX4 SITL和Gazebo仿真
+Home-page: UNKNOWN
+Maintainer: ywt
+Maintainer-email: ywt@todo.todo
+License: Apache-2.0
+Platform: UNKNOWN
+
+UNKNOWN
+

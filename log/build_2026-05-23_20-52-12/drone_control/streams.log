@@ -1,0 +1,20 @@
+[30.030s] Invoking command in '/home/ywt/FlyControl/ros2_fc/build/drone_control': PYTHONPATH=/home/ywt/FlyControl/ros2_fc/build/drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ywt/FlyControl/ros2_fc/build/drone_control/build --no-deps symlink_data
+[30.424s] running develop
+[30.676s] running egg_info
+[30.676s] writing drone_control.egg-info/PKG-INFO
+[30.677s] writing dependency_links to drone_control.egg-info/dependency_links.txt
+[30.677s] writing entry points to drone_control.egg-info/entry_points.txt
+[30.677s] writing requirements to drone_control.egg-info/requires.txt
+[30.677s] writing top-level names to drone_control.egg-info/top_level.txt
+[30.680s] reading manifest file 'drone_control.egg-info/SOURCES.txt'
+[30.688s] writing manifest file 'drone_control.egg-info/SOURCES.txt'
+[30.690s] running build_ext
+[30.690s] Creating /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages/drone-control.egg-link (link to .)
+[30.691s] Installing drone_state_monitor script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+[30.693s] Installing gazebo_sim_interface script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+[30.693s] Installing px4_offboard script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+[30.693s] Installing talker script to /home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control
+[30.694s] 
+[30.694s] Installed /home/ywt/FlyControl/ros2_fc/build/drone_control
+[30.695s] running symlink_data
+[30.733s] Invoked command in '/home/ywt/FlyControl/ros2_fc/build/drone_control' returned '0': PYTHONPATH=/home/ywt/FlyControl/ros2_fc/build/drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ywt/FlyControl/ros2_fc/build/drone_control/build --no-deps symlink_data

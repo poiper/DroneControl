@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- 启动Gazebo和PX4 SITL的完整仿真环境 -->
+  
+  <!-- 参数 -->
+  <arg name="world_name" default="empty_world"/>
+  <arg name="verbose" default="false"/>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="px4_dir" default="$(env HOME)/PX4-Autopilot"/>
+  
+  <!-- 设置仿真时间 -->
+  <param name="/use_sim_time" value="$(arg use_sim_time)"/>
+  
+  <!-- 启动Gazebo服务器 -->
+  <include file="$(find gazebo_ros)/launch/gazebo.launch.xml">
+    <arg name="world_name" value="$(find drone_control)/worlds/$(arg world_name).world"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+  
+  <!-- 启动ROS节点 -->
+  <node pkg="drone_control" exec="drone_state_monitor" output="screen"/>
+  <node pkg="drone_control" exec="gazebo_sim_interface" output="screen"/>
+  
+</launch>
