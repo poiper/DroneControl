@@ -35,6 +35,8 @@ setup(
             'px4_offboard = drone_control.px4_offboard:main',
             'drone_state_monitor = drone_control.drone_state_monitor:main',
             'gazebo_sim_interface = drone_control.gazebo_sim_interface:main',
+            'trajectory_experiment = drone_control.trajectory_experiment:main',
+            'gazebo_trajectory_visualizer = drone_control.gazebo_trajectory_visualizer:main',
         ],
     },
 )

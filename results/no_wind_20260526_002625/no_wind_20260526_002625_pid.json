@@ -1,0 +1,10 @@
+{
+  "MPC_XY_P": 0.95,
+  "MPC_XY_VEL_D_ACC": 0.2,
+  "MPC_XY_VEL_I_ACC": 0.4,
+  "MPC_XY_VEL_P_ACC": 1.8,
+  "MPC_Z_P": 1.0,
+  "MPC_Z_VEL_D_ACC": 0.0,
+  "MPC_Z_VEL_I_ACC": 2.0,
+  "MPC_Z_VEL_P_ACC": 4.0
+}

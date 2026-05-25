@@ -1,0 +1,108 @@
+[INFO] [launch]: All log files can be found below /home/ywt/.ros/log/2026-05-26-00-07-39-107640-ywt-60824
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [drone_state_monitor-1]: process started with pid [60855]
+[INFO] [gazebo_sim_interface-2]: process started with pid [60857]
+[INFO] [px4_offboard-3]: process started with pid [60859]
+[gazebo_sim_interface-2] [INFO] [1779725260.479352951] [gazebo_sim_interface]: Gazebo Sim Interface initialized (vehicle_id=0)
+[drone_state_monitor-1] [INFO] [1779725260.899247149] [drone_state_monitor]: Drone State Monitor initialized (vehicle_id=0, update_rate=50Hz)
+[drone_state_monitor-1] Traceback (most recent call last):
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/drone_state_monitor", line 33, in <module>
+[drone_state_monitor-1]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'drone_state_monitor')())
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/drone_state_monitor.py", line 218, in main
+[drone_state_monitor-1]     rclpy.spin(monitor)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[drone_state_monitor-1]     executor.spin_once()
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+[drone_state_monitor-1]     self._spin_once_impl(timeout_sec)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 805, in _spin_once_impl
+[drone_state_monitor-1]     raise handler.exception()
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 272, in _execute_coroutine_step
+[drone_state_monitor-1]     result = coro.send(None)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 488, in handler
+[drone_state_monitor-1]     await call_coroutine(entity, arg)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 396, in _execute_timer
+[drone_state_monitor-1]     await await_or_execute(tmr.callback)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 110, in await_or_execute
+[drone_state_monitor-1]     return callback(*args)
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/drone_state_monitor.py", line 188, in publish_state
+[drone_state_monitor-1]     accel_msg.accel.linear.x = self.acceleration[0]
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_vector3.py", line 135, in x
+[drone_state_monitor-1]     assert \
+[drone_state_monitor-1] AssertionError: The 'x' field must be of type 'float'
+[ERROR] [drone_state_monitor-1]: process has died [pid 60855, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/drone_state_monitor --ros-args --params-file /tmp/launch_params_p3ggop5_'].
+[px4_offboard-3] [INFO] [1779725261.395239102] [px4_offboard_controller]: PX4 Offboard Controller initialized (vehicle_id=0, namespace=/drone_0, auto_takeoff=True, takeoff_altitude=2.0m)
+[px4_offboard-3] [WARN] [1779725266.590412411] [px4_offboard_controller]: Drone is not armed!
+[px4_offboard-3] [INFO] [1779725266.590828668] [px4_offboard_controller]: Arm command sent
+[px4_offboard-3] [WARN] [1779725266.591108543] [px4_offboard_controller]: Not in offboard mode!
+[px4_offboard-3] [INFO] [1779725266.591429222] [px4_offboard_controller]: Offboard mode command sent
+[px4_offboard-3] [INFO] [1779725266.591674381] [px4_offboard_controller]: Position: [0.01, -0.00, 0.06], Mode: position, Armed: False, Offboard: False
+[px4_offboard-3] [INFO] [1779725268.590508707] [px4_offboard_controller]: Position: [0.02, 0.02, 0.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725270.590268463] [px4_offboard_controller]: Position: [0.36, -0.02, -0.35], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725272.590443752] [px4_offboard_controller]: Position: [2.08, 0.07, -1.43], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725274.590440979] [px4_offboard_controller]: Position: [1.98, 0.56, -1.84], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725276.590444682] [px4_offboard_controller]: Position: [0.17, 1.75, -1.93], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725278.590407682] [px4_offboard_controller]: Position: [-0.42, 2.40, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725280.590265240] [px4_offboard_controller]: Position: [-1.11, 1.07, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725282.590299001] [px4_offboard_controller]: Position: [-2.11, -0.14, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725284.590339027] [px4_offboard_controller]: Position: [-1.79, -0.80, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725286.590424807] [px4_offboard_controller]: Position: [-0.59, -1.73, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725288.590284808] [px4_offboard_controller]: Position: [0.40, -2.14, -2.11], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725290.590498017] [px4_offboard_controller]: Position: [1.27, -1.47, -2.11], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725292.590289099] [px4_offboard_controller]: Position: [1.96, -0.36, -2.10], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725294.590356943] [px4_offboard_controller]: Position: [1.90, 0.68, -2.10], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725296.590445297] [px4_offboard_controller]: Position: [1.07, 1.49, -2.09], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725301.510267550] [px4_offboard_controller]: Position: [-0.64, 1.56, -2.10], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725303.510327064] [px4_offboard_controller]: Position: [-1.84, -0.19, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725305.510263640] [px4_offboard_controller]: Position: [-1.78, -0.86, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725307.510568801] [px4_offboard_controller]: Position: [-0.65, -1.62, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725309.510407365] [px4_offboard_controller]: Position: [0.40, -1.96, -2.07], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725311.510392258] [px4_offboard_controller]: Position: [1.25, -1.37, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725313.510487711] [px4_offboard_controller]: Position: [1.89, -0.27, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725315.510277737] [px4_offboard_controller]: Position: [1.82, 0.75, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725317.510196199] [px4_offboard_controller]: Position: [1.00, 1.54, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725319.510422597] [px4_offboard_controller]: Position: [-0.11, 1.92, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725321.510456517] [px4_offboard_controller]: Position: [-1.13, 1.57, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725323.510443603] [px4_offboard_controller]: Position: [-1.76, 0.62, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725325.510273704] [px4_offboard_controller]: Position: [-1.87, -0.57, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725327.510397992] [px4_offboard_controller]: Position: [-1.28, -1.48, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725329.510356896] [px4_offboard_controller]: Position: [-0.21, -1.91, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725331.510419277] [px4_offboard_controller]: Position: [0.89, -1.72, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725333.510351408] [px4_offboard_controller]: Position: [1.37, -1.67, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725338.450394700] [px4_offboard_controller]: Position: [1.26, -1.65, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725340.450348400] [px4_offboard_controller]: Position: [1.30, -1.44, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725342.450275466] [px4_offboard_controller]: Position: [1.42, -1.41, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725344.450283880] [px4_offboard_controller]: Position: [1.37, -1.48, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725346.450202853] [px4_offboard_controller]: Position: [1.34, -1.51, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725348.450157302] [px4_offboard_controller]: Position: [1.31, -1.58, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725350.450197943] [px4_offboard_controller]: Position: [1.28, -1.61, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725352.450201885] [px4_offboard_controller]: Position: [1.29, -1.61, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725354.450180019] [px4_offboard_controller]: Position: [1.35, -1.59, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725356.450241582] [px4_offboard_controller]: Position: [1.35, -1.63, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779725358.450312990] [px4_offboard_controller]: Position: [1.33, -1.63, -2.01], Mode: position, Armed: True, Offboard: True
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[px4_offboard-3] Traceback (most recent call last):
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/px4_offboard", line 33, in <module>
+[px4_offboard-3]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'px4_offboard')())
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 297, in main
+[px4_offboard-3]     controller.disarm()
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 185, in disarm
+[px4_offboard-3]     self.publish_vehicle_command(
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 217, in publish_vehicle_command
+[px4_offboard-3]     self.vehicle_command_pub.publish(cmd)
+[px4_offboard-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+[px4_offboard-3]     self.__publisher.publish(msg)
+[px4_offboard-3] rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[gazebo_sim_interface-2] Traceback (most recent call last):
+[gazebo_sim_interface-2]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_sim_interface", line 33, in <module>
+[gazebo_sim_interface-2]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'gazebo_sim_interface')())
+[gazebo_sim_interface-2]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/gazebo_sim_interface.py", line 80, in main
+[gazebo_sim_interface-2]     rclpy.shutdown()
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[gazebo_sim_interface-2]     _shutdown(context=context)
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[gazebo_sim_interface-2]     return context.shutdown()
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[gazebo_sim_interface-2]     self.__context.shutdown()
+[gazebo_sim_interface-2] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[ERROR] [gazebo_sim_interface-2]: process has died [pid 60857, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_sim_interface --ros-args --params-file /tmp/launch_params_ls1qmtzw'].
+[ERROR] [px4_offboard-3]: process has died [pid 60859, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/px4_offboard --ros-args --params-file /tmp/launch_params_j0m_legp'].

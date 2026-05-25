@@ -18,18 +18,20 @@ def generate_launch_description():
     # 获取包目录
     drone_control_dir = get_package_share_directory('drone_control')
     
-    # 获取world文件路径
-    world_path = os.path.join(drone_control_dir, 'worlds', 'empty_world.world')
-    
-    # 检查world文件是否存在，如果不存在使用默认的empty world
-    if not os.path.exists(world_path):
-        world_path = 'worlds/empty.world'
+    default_world_path = os.path.join(drone_control_dir, 'worlds', 'empty_world.world')
     
     start_gazebo = LaunchConfiguration('start_gazebo')
     start_px4 = LaunchConfiguration('start_px4')
     px4_dir = LaunchConfiguration('px4_dir')
     use_sim_time = LaunchConfiguration('use_sim_time')
     namespace = LaunchConfiguration('namespace')
+    world_path = LaunchConfiguration('world')
+    auto_takeoff = LaunchConfiguration('auto_takeoff')
+    takeoff_altitude = LaunchConfiguration('takeoff_altitude')
+    start_experiment = LaunchConfiguration('start_experiment')
+    experiment_pattern = LaunchConfiguration('experiment_pattern')
+    experiment_duration = LaunchConfiguration('experiment_duration')
+    start_trajectory_visualizer = LaunchConfiguration('start_trajectory_visualizer')
     
     ld = LaunchDescription([
         DeclareLaunchArgument(
@@ -56,6 +58,41 @@ def generate_launch_description():
             'namespace',
             default_value='/drone_0',
             description='ROS namespace prefix used by PX4 uXRCE-DDS topics.'
+        ),
+        DeclareLaunchArgument(
+            'world',
+            default_value=default_world_path,
+            description='Gazebo world file used when start_gazebo is true.'
+        ),
+        DeclareLaunchArgument(
+            'auto_takeoff',
+            default_value='true',
+            description='Publish a default takeoff/hover setpoint from px4_offboard.'
+        ),
+        DeclareLaunchArgument(
+            'takeoff_altitude',
+            default_value='2.0',
+            description='Default hover altitude in meters for auto_takeoff.'
+        ),
+        DeclareLaunchArgument(
+            'start_experiment',
+            default_value='false',
+            description='Start trajectory_experiment to publish a repeatable test path.'
+        ),
+        DeclareLaunchArgument(
+            'experiment_pattern',
+            default_value='circle',
+            description='Trajectory pattern: hover, line, circle, or figure8.'
+        ),
+        DeclareLaunchArgument(
+            'experiment_duration',
+            default_value='60.0',
+            description='Trajectory experiment duration in seconds.'
+        ),
+        DeclareLaunchArgument(
+            'start_trajectory_visualizer',
+            default_value='false',
+            description='Show commanded and actual trajectory points inside Gazebo.'
         ),
     ])
     
@@ -127,8 +164,37 @@ def generate_launch_description():
             'vehicle_id': 0,
             'target_system': 1,
             'arm_timeout': 10.0,
+            'auto_takeoff': auto_takeoff,
+            'takeoff_altitude': takeoff_altitude,
         }]
     )
     ld.add_action(offboard_controller)
+
+    trajectory_experiment = Node(
+        package='drone_control',
+        executable='trajectory_experiment',
+        output='screen',
+        condition=IfCondition(start_experiment),
+        parameters=[{
+            'use_sim_time': use_sim_time,
+            'namespace': namespace,
+            'pattern': experiment_pattern,
+            'duration': experiment_duration,
+            'altitude': takeoff_altitude,
+        }]
+    )
+    ld.add_action(trajectory_experiment)
+
+    trajectory_visualizer = Node(
+        package='drone_control',
+        executable='gazebo_trajectory_visualizer',
+        output='screen',
+        condition=IfCondition(start_trajectory_visualizer),
+        parameters=[{
+            'use_sim_time': use_sim_time,
+            'namespace': namespace,
+        }]
+    )
+    ld.add_action(trajectory_visualizer)
     
     return ld

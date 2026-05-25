@@ -1,0 +1,15 @@
+[INFO] [1779726425.476836460] [trajectory_experiment]: Running circle trajectory for 60.0s, logging to /home/ywt/FlyControl/ros2_fc/results/no_wind_20260526_002625/no_wind_20260526_002625_trajectory.csv
+[INFO] [1779726485.464476079] [trajectory_experiment]: Trajectory complete; CSV log flushed
+Traceback (most recent call last):
+  File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/trajectory_experiment", line 33, in <module>
+    sys.exit(load_entry_point('drone-control', 'console_scripts', 'trajectory_experiment')())
+  File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/trajectory_experiment.py", line 163, in main
+    rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 100, in shutdown
+    raise RuntimeError('Context must be initialized before it can be shutdown')
+RuntimeError: Context must be initialized before it can be shutdown
+[ros2run]: Process exited with failure 1

@@ -1,0 +1,236 @@
+[INFO] [launch]: All log files can be found below /home/ywt/.ros/log/2026-05-26-00-26-56-592638-ywt-65391
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [drone_state_monitor-1]: process started with pid [65425]
+[INFO] [gazebo_sim_interface-2]: process started with pid [65427]
+[INFO] [px4_offboard-3]: process started with pid [65429]
+[INFO] [gazebo_trajectory_visualizer-4]: process started with pid [65431]
+[gazebo_sim_interface-2] [INFO] [1779726418.394683816] [gazebo_sim_interface]: Gazebo Sim Interface initialized (vehicle_id=0)
+[gazebo_trajectory_visualizer-4] [INFO] [1779726418.814956601] [gazebo_trajectory_visualizer]: Gazebo trajectory visualizer initialized for namespace=/drone_0
+[px4_offboard-3] [INFO] [1779726419.097856786] [px4_offboard_controller]: PX4 Offboard Controller initialized (vehicle_id=0, namespace=/drone_0, auto_takeoff=True, takeoff_altitude=2.0m)
+[drone_state_monitor-1] [INFO] [1779726419.229978029] [drone_state_monitor]: Drone State Monitor initialized (vehicle_id=0, update_rate=50Hz)
+[drone_state_monitor-1] Traceback (most recent call last):
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/drone_state_monitor", line 33, in <module>
+[drone_state_monitor-1]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'drone_state_monitor')())
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/drone_state_monitor.py", line 218, in main
+[drone_state_monitor-1]     rclpy.spin(monitor)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[drone_state_monitor-1]     executor.spin_once()
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+[drone_state_monitor-1]     self._spin_once_impl(timeout_sec)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 805, in _spin_once_impl
+[drone_state_monitor-1]     raise handler.exception()
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 272, in _execute_coroutine_step
+[drone_state_monitor-1]     result = coro.send(None)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 488, in handler
+[drone_state_monitor-1]     await call_coroutine(entity, arg)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 396, in _execute_timer
+[drone_state_monitor-1]     await await_or_execute(tmr.callback)
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 110, in await_or_execute
+[drone_state_monitor-1]     return callback(*args)
+[drone_state_monitor-1]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/drone_state_monitor.py", line 188, in publish_state
+[drone_state_monitor-1]     accel_msg.accel.linear.x = self.acceleration[0]
+[drone_state_monitor-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_vector3.py", line 135, in x
+[drone_state_monitor-1]     assert \
+[drone_state_monitor-1] AssertionError: The 'x' field must be of type 'float'
+[ERROR] [drone_state_monitor-1]: process has died [pid 65425, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/drone_state_monitor --ros-args --params-file /tmp/launch_params_l9hgeqcg'].
+[px4_offboard-3] [WARN] [1779726421.071574389] [px4_offboard_controller]: Drone is not armed!
+[px4_offboard-3] [INFO] [1779726421.072113593] [px4_offboard_controller]: Arm command sent
+[px4_offboard-3] [WARN] [1779726421.072406830] [px4_offboard_controller]: Not in offboard mode!
+[px4_offboard-3] [INFO] [1779726421.072791449] [px4_offboard_controller]: Offboard mode command sent
+[px4_offboard-3] [INFO] [1779726421.073041906] [px4_offboard_controller]: Position: [0.00, -0.01, 0.08], Mode: position, Armed: False, Offboard: False
+[px4_offboard-3] [INFO] [1779726423.071641562] [px4_offboard_controller]: Position: [-0.01, -0.00, 0.11], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726425.071829659] [px4_offboard_controller]: Position: [-0.06, 0.02, -0.32], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726427.071521375] [px4_offboard_controller]: Position: [1.21, -0.09, -1.42], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726429.071532347] [px4_offboard_controller]: Position: [1.68, 0.85, -1.81], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726431.071505022] [px4_offboard_controller]: Position: [0.32, 1.88, -1.92], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726433.071499083] [px4_offboard_controller]: Position: [-0.52, 2.36, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726435.071486535] [px4_offboard_controller]: Position: [-1.29, 1.36, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726437.071471152] [px4_offboard_controller]: Position: [-2.03, 0.13, -2.07], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726441.971538330] [px4_offboard_controller]: Position: [-1.33, -1.21, -2.13], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726443.971962795] [px4_offboard_controller]: Position: [0.93, -1.60, -2.11], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726445.971760863] [px4_offboard_controller]: Position: [1.60, -1.33, -2.11], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726447.971507821] [px4_offboard_controller]: Position: [1.76, -0.04, -2.10], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726449.971863673] [px4_offboard_controller]: Position: [1.60, 1.15, -2.09], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726451.971687466] [px4_offboard_controller]: Position: [0.73, 1.71, -2.09], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726453.971641433] [px4_offboard_controller]: Position: [-0.49, 1.76, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726455.971939994] [px4_offboard_controller]: Position: [-1.43, 1.25, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726457.971730596] [px4_offboard_controller]: Position: [-1.86, 0.21, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726459.971627326] [px4_offboard_controller]: Position: [-1.69, -0.90, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726461.971534216] [px4_offboard_controller]: Position: [-0.91, -1.65, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726463.971825790] [px4_offboard_controller]: Position: [0.26, -1.87, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726465.971772989] [px4_offboard_controller]: Position: [1.27, -1.45, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726467.971568035] [px4_offboard_controller]: Position: [1.83, -0.49, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726469.971548241] [px4_offboard_controller]: Position: [1.81, 0.64, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726471.971521301] [px4_offboard_controller]: Position: [1.13, 1.53, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726473.971497402] [px4_offboard_controller]: Position: [0.05, 1.90, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726478.871563092] [px4_offboard_controller]: Position: [-1.62, 0.08, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726480.871588162] [px4_offboard_controller]: Position: [-1.87, -0.92, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726482.871759524] [px4_offboard_controller]: Position: [-0.97, -1.47, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726484.871852648] [px4_offboard_controller]: Position: [0.28, -1.87, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726486.871641229] [px4_offboard_controller]: Position: [1.13, -1.67, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726488.871618550] [px4_offboard_controller]: Position: [1.32, -1.71, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726490.871581619] [px4_offboard_controller]: Position: [1.28, -1.65, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726492.871757129] [px4_offboard_controller]: Position: [1.30, -1.48, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726494.871707574] [px4_offboard_controller]: Position: [1.41, -1.44, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726496.871580289] [px4_offboard_controller]: Position: [1.42, -1.52, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726498.871615067] [px4_offboard_controller]: Position: [1.36, -1.62, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726500.871552830] [px4_offboard_controller]: Position: [1.28, -1.58, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726502.871713440] [px4_offboard_controller]: Position: [1.33, -1.57, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726504.871647760] [px4_offboard_controller]: Position: [1.36, -1.59, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [WARN] [1779726506.871693815] [px4_offboard_controller]: Not in offboard mode!
+[px4_offboard-3] [INFO] [1779726506.872095589] [px4_offboard_controller]: Offboard mode command sent
+[px4_offboard-3] [INFO] [1779726506.872379330] [px4_offboard_controller]: Position: [1.36, -1.65, -1.76], Mode: position, Armed: True, Offboard: False
+[px4_offboard-3] [WARN] [1779726508.871584746] [px4_offboard_controller]: Not in offboard mode!
+[px4_offboard-3] [INFO] [1779726508.871931747] [px4_offboard_controller]: Offboard mode command sent
+[px4_offboard-3] [INFO] [1779726508.872149427] [px4_offboard_controller]: Position: [1.37, -1.81, -1.00], Mode: position, Armed: True, Offboard: False
+[px4_offboard-3] [INFO] [1779726513.791569042] [px4_offboard_controller]: Position: [1.26, -1.56, -1.84], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726515.791563830] [px4_offboard_controller]: Position: [1.35, -1.51, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726517.791582720] [px4_offboard_controller]: Position: [1.35, -1.57, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726519.791616890] [px4_offboard_controller]: Position: [1.30, -1.57, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726521.791560214] [px4_offboard_controller]: Position: [1.27, -1.55, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726523.791542712] [px4_offboard_controller]: Position: [1.26, -1.53, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726525.791503305] [px4_offboard_controller]: Position: [1.33, -1.49, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726527.791806219] [px4_offboard_controller]: Position: [1.34, -1.54, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726529.791492238] [px4_offboard_controller]: Position: [1.30, -1.57, -1.95], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726531.791563380] [px4_offboard_controller]: Position: [1.26, -1.55, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726533.791519648] [px4_offboard_controller]: Position: [1.30, -1.53, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726535.791553768] [px4_offboard_controller]: Position: [1.37, -1.56, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726537.791494097] [px4_offboard_controller]: Position: [1.35, -1.57, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726539.791659219] [px4_offboard_controller]: Position: [1.34, -1.55, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726541.791731564] [px4_offboard_controller]: Position: [1.33, -1.54, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726543.791564696] [px4_offboard_controller]: Position: [1.34, -1.50, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726548.731587738] [px4_offboard_controller]: Position: [1.36, -1.51, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726550.731581636] [px4_offboard_controller]: Position: [1.35, -1.51, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726552.731737267] [px4_offboard_controller]: Position: [1.31, -1.54, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726554.731516470] [px4_offboard_controller]: Position: [1.26, -1.52, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726556.731814675] [px4_offboard_controller]: Position: [1.29, -1.49, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726558.731767153] [px4_offboard_controller]: Position: [1.28, -1.53, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726560.731688920] [px4_offboard_controller]: Position: [1.25, -1.53, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726562.731515156] [px4_offboard_controller]: Position: [1.25, -1.52, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726564.731858803] [px4_offboard_controller]: Position: [1.27, -1.55, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726566.731766261] [px4_offboard_controller]: Position: [1.26, -1.57, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726568.731542352] [px4_offboard_controller]: Position: [1.28, -1.56, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726570.731756940] [px4_offboard_controller]: Position: [1.30, -1.53, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726572.731612835] [px4_offboard_controller]: Position: [1.35, -1.55, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726574.731486570] [px4_offboard_controller]: Position: [1.35, -1.55, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726576.731433511] [px4_offboard_controller]: Position: [1.33, -1.51, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726578.731669089] [px4_offboard_controller]: Position: [1.34, -1.49, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726583.671496448] [px4_offboard_controller]: Position: [1.33, -1.51, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726585.671530969] [px4_offboard_controller]: Position: [1.32, -1.49, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726587.671727092] [px4_offboard_controller]: Position: [1.31, -1.53, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726589.671648520] [px4_offboard_controller]: Position: [1.29, -1.55, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726591.671539888] [px4_offboard_controller]: Position: [1.29, -1.51, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726593.671649736] [px4_offboard_controller]: Position: [1.32, -1.52, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726595.671629456] [px4_offboard_controller]: Position: [1.31, -1.54, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726597.671571208] [px4_offboard_controller]: Position: [1.30, -1.49, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726599.671675822] [px4_offboard_controller]: Position: [1.35, -1.49, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726601.671504674] [px4_offboard_controller]: Position: [1.36, -1.57, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726603.671600287] [px4_offboard_controller]: Position: [1.29, -1.56, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726605.671516746] [px4_offboard_controller]: Position: [1.32, -1.50, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726607.671547097] [px4_offboard_controller]: Position: [1.33, -1.52, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726609.671551122] [px4_offboard_controller]: Position: [1.30, -1.58, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726611.671541140] [px4_offboard_controller]: Position: [1.28, -1.57, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726613.671541339] [px4_offboard_controller]: Position: [1.30, -1.56, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726618.571449375] [px4_offboard_controller]: Position: [1.35, -1.57, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726620.571539577] [px4_offboard_controller]: Position: [1.33, -1.52, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726622.571459086] [px4_offboard_controller]: Position: [1.32, -1.49, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726624.571515617] [px4_offboard_controller]: Position: [1.32, -1.51, -2.07], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726626.571898556] [px4_offboard_controller]: Position: [1.29, -1.55, -2.08], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726628.571612415] [px4_offboard_controller]: Position: [1.26, -1.53, -2.07], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726630.571558769] [px4_offboard_controller]: Position: [1.27, -1.51, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726632.571832727] [px4_offboard_controller]: Position: [1.30, -1.54, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726634.571533719] [px4_offboard_controller]: Position: [1.33, -1.55, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726636.571665866] [px4_offboard_controller]: Position: [1.33, -1.56, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726638.571489609] [px4_offboard_controller]: Position: [1.33, -1.57, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726640.571606054] [px4_offboard_controller]: Position: [1.36, -1.57, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726642.571698141] [px4_offboard_controller]: Position: [1.36, -1.58, -1.95], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726644.571525474] [px4_offboard_controller]: Position: [1.34, -1.60, -1.95], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726646.571518238] [px4_offboard_controller]: Position: [1.31, -1.57, -1.94], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726648.571531001] [px4_offboard_controller]: Position: [1.33, -1.54, -1.93], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726653.491606027] [px4_offboard_controller]: Position: [1.35, -1.55, -1.92], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726655.491500425] [px4_offboard_controller]: Position: [1.32, -1.51, -1.94], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726657.491829429] [px4_offboard_controller]: Position: [1.30, -1.51, -1.94], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726659.491582977] [px4_offboard_controller]: Position: [1.31, -1.53, -1.96], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726661.491667999] [px4_offboard_controller]: Position: [1.32, -1.52, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726663.491687220] [px4_offboard_controller]: Position: [1.33, -1.53, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726665.491693422] [px4_offboard_controller]: Position: [1.29, -1.53, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726667.491514679] [px4_offboard_controller]: Position: [1.29, -1.54, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726669.491563770] [px4_offboard_controller]: Position: [1.29, -1.56, -2.05], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726671.491516640] [px4_offboard_controller]: Position: [1.26, -1.55, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726673.491499996] [px4_offboard_controller]: Position: [1.27, -1.52, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726675.491477033] [px4_offboard_controller]: Position: [1.28, -1.52, -1.92], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726677.491582725] [px4_offboard_controller]: Position: [1.29, -1.52, -1.89], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726679.491580174] [px4_offboard_controller]: Position: [1.32, -1.55, -1.88], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726681.491569816] [px4_offboard_controller]: Position: [1.28, -1.55, -1.90], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726683.491760176] [px4_offboard_controller]: Position: [1.29, -1.53, -1.91], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726688.413219529] [px4_offboard_controller]: Position: [1.30, -1.53, -1.94], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726690.411614074] [px4_offboard_controller]: Position: [1.35, -1.54, -1.92], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726692.411656627] [px4_offboard_controller]: Position: [1.31, -1.52, -1.90], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726694.411509872] [px4_offboard_controller]: Position: [1.26, -1.48, -1.90], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726696.411443277] [px4_offboard_controller]: Position: [1.28, -1.47, -1.90], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726698.411561022] [px4_offboard_controller]: Position: [1.31, -1.50, -1.93], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726700.411594012] [px4_offboard_controller]: Position: [1.33, -1.54, -1.97], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726702.411694976] [px4_offboard_controller]: Position: [1.34, -1.52, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726704.411772859] [px4_offboard_controller]: Position: [1.40, -1.53, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726706.411615358] [px4_offboard_controller]: Position: [1.36, -1.57, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726708.411821078] [px4_offboard_controller]: Position: [1.29, -1.54, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726710.411669732] [px4_offboard_controller]: Position: [1.33, -1.51, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726712.411534890] [px4_offboard_controller]: Position: [1.32, -1.51, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726714.411561921] [px4_offboard_controller]: Position: [1.31, -1.50, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726716.411545727] [px4_offboard_controller]: Position: [1.28, -1.52, -2.00], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726718.411668666] [px4_offboard_controller]: Position: [1.27, -1.52, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726720.411927139] [px4_offboard_controller]: Position: [1.29, -1.51, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726725.331672457] [px4_offboard_controller]: Position: [1.33, -1.55, -2.01], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726727.331531690] [px4_offboard_controller]: Position: [1.31, -1.55, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726729.331531055] [px4_offboard_controller]: Position: [1.29, -1.49, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726731.331644227] [px4_offboard_controller]: Position: [1.33, -1.50, -2.03], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726733.331620493] [px4_offboard_controller]: Position: [1.32, -1.55, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726735.331573363] [px4_offboard_controller]: Position: [1.27, -1.57, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726737.331977673] [px4_offboard_controller]: Position: [1.28, -1.54, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726739.331577779] [px4_offboard_controller]: Position: [1.30, -1.55, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726741.331608358] [px4_offboard_controller]: Position: [1.30, -1.54, -2.06], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726743.331989484] [px4_offboard_controller]: Position: [1.32, -1.53, -2.04], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726745.331617382] [px4_offboard_controller]: Position: [1.36, -1.51, -2.02], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726747.331718809] [px4_offboard_controller]: Position: [1.37, -1.56, -1.99], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726749.331678659] [px4_offboard_controller]: Position: [1.32, -1.60, -1.98], Mode: position, Armed: True, Offboard: True
+[px4_offboard-3] [INFO] [1779726751.331643504] [px4_offboard_controller]: Position: [1.29, -1.57, -1.98], Mode: position, Armed: True, Offboard: True
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[px4_offboard-3] Traceback (most recent call last):
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/px4_offboard", line 33, in <module>
+[px4_offboard-3]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'px4_offboard')())
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 297, in main
+[px4_offboard-3]     controller.disarm()
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 185, in disarm
+[px4_offboard-3]     self.publish_vehicle_command(
+[px4_offboard-3]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/px4_offboard.py", line 217, in publish_vehicle_command
+[px4_offboard-3]     self.vehicle_command_pub.publish(cmd)
+[px4_offboard-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+[px4_offboard-3]     self.__publisher.publish(msg)
+[px4_offboard-3] rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[gazebo_trajectory_visualizer-4] Traceback (most recent call last):
+[gazebo_trajectory_visualizer-4]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_trajectory_visualizer", line 33, in <module>
+[gazebo_trajectory_visualizer-4]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'gazebo_trajectory_visualizer')())
+[gazebo_trajectory_visualizer-4]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/gazebo_trajectory_visualizer.py", line 150, in main
+[gazebo_trajectory_visualizer-4]     rclpy.shutdown()
+[gazebo_trajectory_visualizer-4]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[gazebo_trajectory_visualizer-4]     _shutdown(context=context)
+[gazebo_trajectory_visualizer-4]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[gazebo_trajectory_visualizer-4]     return context.shutdown()
+[gazebo_trajectory_visualizer-4]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[gazebo_trajectory_visualizer-4]     self.__context.shutdown()
+[gazebo_trajectory_visualizer-4] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[gazebo_sim_interface-2] Traceback (most recent call last):
+[gazebo_sim_interface-2]   File "/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_sim_interface", line 33, in <module>
+[gazebo_sim_interface-2]     sys.exit(load_entry_point('drone-control', 'console_scripts', 'gazebo_sim_interface')())
+[gazebo_sim_interface-2]   File "/home/ywt/FlyControl/ros2_fc/build/drone_control/drone_control/gazebo_sim_interface.py", line 80, in main
+[gazebo_sim_interface-2]     rclpy.shutdown()
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[gazebo_sim_interface-2]     _shutdown(context=context)
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[gazebo_sim_interface-2]     return context.shutdown()
+[gazebo_sim_interface-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[gazebo_sim_interface-2]     self.__context.shutdown()
+[gazebo_sim_interface-2] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[ERROR] [gazebo_sim_interface-2]: process has died [pid 65427, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_sim_interface --ros-args --params-file /tmp/launch_params_uoq2ofd9'].
+[ERROR] [gazebo_trajectory_visualizer-4]: process has died [pid 65431, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/gazebo_trajectory_visualizer --ros-args --params-file /tmp/launch_params_qfkdczno'].
+[ERROR] [px4_offboard-3]: process has died [pid 65429, exit code 1, cmd '/home/ywt/FlyControl/ros2_fc/install/drone_control/lib/drone_control/px4_offboard --ros-args --params-file /tmp/launch_params_ry9f3bxa'].

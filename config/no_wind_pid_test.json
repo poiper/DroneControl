@@ -1,0 +1,51 @@
+{
+  "name": "no_wind_pid_circle",
+  "workspace": "~/FlyControl/ros2_fc",
+  "px4_dir": "~/development/PX4-Autopilot",
+  "agent": {
+    "command": "/usr/local/bin/MicroXRCEAgent",
+    "port": 8888,
+    "verbose": 4
+  },
+  "ros": {
+    "domain_id": 0,
+    "localhost_only": 0,
+    "rmw_implementation": "rmw_fastrtps_cpp",
+    "namespace": "/drone_0",
+    "takeoff_altitude": 2.0
+  },
+  "simulation": {
+    "world": "empty",
+    "model": "gazebo"
+  },
+  "pid": {
+    "MPC_XY_P": 0.95,
+    "MPC_Z_P": 1.0,
+    "MPC_XY_VEL_P_ACC": 1.8,
+    "MPC_XY_VEL_I_ACC": 0.4,
+    "MPC_XY_VEL_D_ACC": 0.2,
+    "MPC_Z_VEL_P_ACC": 4.0,
+    "MPC_Z_VEL_I_ACC": 2.0,
+    "MPC_Z_VEL_D_ACC": 0.0
+  },
+  "trajectory": {
+    "pattern": "circle",
+    "radius": 2.0,
+    "speed": 0.6,
+    "altitude": 2.0,
+    "duration": 60.0,
+    "publish_rate": 20.0
+  },
+  "visualization": {
+    "gazebo_trajectory": true
+  },
+  "output": {
+    "directory": "~/FlyControl/ros2_fc/results",
+    "prefix": "no_wind"
+  },
+  "timeouts": {
+    "px4_ready_s": 90,
+    "dds_ready_s": 30,
+    "hover_settle_s": 8
+  }
+}

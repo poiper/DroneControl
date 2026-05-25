@@ -12,8 +12,10 @@ config/px4_config.yaml
 drone_control/__init__.py
 drone_control/drone_state_monitor.py
 drone_control/gazebo_sim_interface.py
+drone_control/gazebo_trajectory_visualizer.py
 drone_control/px4_offboard.py
 drone_control/talker.py
+drone_control/trajectory_experiment.py
 drone_control.egg-info/PKG-INFO
 drone_control.egg-info/SOURCES.txt
 drone_control.egg-info/dependency_links.txt
@@ -25,3 +27,4 @@ launch/px4_gazebo.launch.xml
 launch/px4_gazebo.py
 resource/drone_control
 worlds/empty_world.world
+worlds/windy_world.world

@@ -1,0 +1,346 @@
+[0/4] Performing build step for 'sitl_gazebo-classic'
+ninja: no work to do.
+[2/4] No install step for 'sitl_gazebo-classic'
+[3/4] Completed 'sitl_gazebo-classic'
+[3/4] cd /home/ywt/development/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/simulator_mavlink && /home/ywt/development/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_run.sh /home/ywt/development/PX4-Autopilot/build/px4_sitl_default/bin/px4 none iris none /home/ywt/development/PX4-Autopilot /home/ywt/development/PX4-Autopilot/build/px4_sitl_default
+SITL ARGS
+sitl_bin: /home/ywt/development/PX4-Autopilot/build/px4_sitl_default/bin/px4
+debugger: none
+model: iris
+world: none
+src_path: /home/ywt/development/PX4-Autopilot
+build_path: /home/ywt/development/PX4-Autopilot/build/px4_sitl_default
+GAZEBO_PLUGIN_PATH :/home/ywt/development/PX4-Autopilot/build/px4_sitl_default/build_gazebo:/home/ywt/development/PX4-Autopilot/build/px4_sitl_default/build_gazebo-classic
+GAZEBO_MODEL_PATH :/home/ywt/development/PX4-Autopilot/Tools/simulation/gazebo/sitl_gazebo/models:/home/ywt/development/PX4-Autopilot/models:/home/ywt/development/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models
+LD_LIBRARY_PATH /home/ywt/FlyControl/ros2_fc/install/px4_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/ywt/development/PX4-Autopilot/build/px4_sitl_default/build_gazebo-classic
+empty world, setting empty.world as default
+Using: /home/ywt/development/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models/iris/iris.sdf
+SITL COMMAND: "/home/ywt/development/PX4-Autopilot/build/px4_sitl_default/bin/px4" "/home/ywt/development/PX4-Autopilot/build/px4_sitl_default"/etc
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh etc/init.d-posix/rcS 0
+INFO  [init] found model autostart file as SYS_AUTOSTART=10015
+INFO  [param] selected parameter default file parameters.bson
+INFO  [param] importing from 'parameters.bson'
+INFO  [parameters] BSON document size 316 bytes, decoded 316 bytes (INT32:13, FLOAT:3)
+INFO  [param] selected parameter backup file parameters_backup.bson
+Gazebo multi-robot simulator, version 11.10.2
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+INFO  [dataman] data manager file './dataman' size is 7866640 bytes
+etc/init.d-posix/rcS: 39: [: Illegal number: 
+INFO  [init] PX4_SIM_HOSTNAME: localhost
+INFO  [simulator_mavlink] Waiting for simulator to accept connection on TCP port 4560
+INFO  [simulator_mavlink] Simulator connected on TCP port 4560.
+INFO  [lockstep_scheduler] setting initial absolute time to 3396000 us
+INFO  [commander] LED: open /dev/led0 failed (22)
+WARN  [health_and_arming_checks] Preflight Fail: ekf2 missing data
+INFO  [mavlink] mode: Normal, data rate: 4000000 B/s on udp port 18570 remote port 14550
+INFO  [mavlink] mode: Onboard, data rate: 4000000 B/s on udp port 14580 remote port 14540
+INFO  [mavlink] mode: Onboard, data rate: 4000 B/s on udp port 14280 remote port 14030
+INFO  [mavlink] mode: Gimbal, data rate: 400000 B/s on udp port 13030 remote port 13280
+INFO  [logger] logger started (mode=all)
+INFO  [logger] Start file log (type: full)
+INFO  [logger] [logger] ./log/2026-05-25/16_26_35.ulg	
+INFO  [logger] Opened full log file: ./log/2026-05-25/16_26_35.ulg
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [px4] Startup script returned successfully
+pxh> INFO  [tone_alarm] home set
+INFO  [uxrce_dds_client] synchronized with time offset 1779726391627554us
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/failsafe_flags data writer, topic id: 80
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/position_setpoint_triplet data writer, topic id: 149
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/sensor_combined data writer, topic id: 168
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/timesync_status data writer, topic id: 191
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_control_mode data writer, topic id: 212
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_gps_position data writer, topic id: 215
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_local_position data writer, topic id: 219
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_odometry data writer, topic id: 224
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_status data writer, topic id: 229
+INFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_attitude data writer, topic id: 206
+INFO  [tone_alarm] notify negative
+[1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m10.255.255.254[0m[1;32m
+[0m[1;32m[0m[1;32m[0m[1;33m[Wrn] [Event.cc:61] [0m[1;33mWarning: Deleting a connection right after creation. [0m[1;33mMake sure to save the ConnectionPtr from a Connect call
+[0mINFO  [uxrce_dds_client] successfully created rt/drone_0/fmu/out/vehicle_global_position data writer, topic id: 213
+INFO  [commander] [32mReady for takeoff![0m
+[2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_X[2K
+pxh> param set MPC_XY[2K
+pxh> param set MPC_XY_[2K
+pxh> param set MPC_XY_P[2K
+pxh> param set MPC_XY_P [2K
+pxh> param set MPC_XY_P 0[2K
+pxh> param set MPC_XY_P 0.[2K
+pxh> param set MPC_XY_P 0.9[2K
+pxh> param set MPC_XY_P 0.95
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_Z[2K
+pxh> param set MPC_Z_[2K
+pxh> param set MPC_Z_P[2K
+pxh> param set MPC_Z_P [2K
+pxh> param set MPC_Z_P 1[2K
+pxh> param set MPC_Z_P 1.[2K
+pxh> param set MPC_Z_P 1.0
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_X[2K
+pxh> param set MPC_XY[2K
+pxh> param set MPC_XY_[2K
+pxh> param set MPC_XY_V[2K
+pxh> param set MPC_XY_VE[2K
+pxh> param set MPC_XY_VEL[2K
+pxh> param set MPC_XY_VEL_[2K
+pxh> param set MPC_XY_VEL_P[2K
+pxh> param set MPC_XY_VEL_P_[2K
+pxh> param set MPC_XY_VEL_P_A[2K
+pxh> param set MPC_XY_VEL_P_AC[2K
+pxh> param set MPC_XY_VEL_P_ACC[2K
+pxh> param set MPC_XY_VEL_P_ACC [2K
+pxh> param set MPC_XY_VEL_P_ACC 1[2K
+pxh> param set MPC_XY_VEL_P_ACC 1.[2K
+pxh> param set MPC_XY_VEL_P_ACC 1.8
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_X[2K
+pxh> param set MPC_XY[2K
+pxh> param set MPC_XY_[2K
+pxh> param set MPC_XY_V[2K
+pxh> param set MPC_XY_VE[2K
+pxh> param set MPC_XY_VEL[2K
+pxh> param set MPC_XY_VEL_[2K
+pxh> param set MPC_XY_VEL_I[2K
+pxh> param set MPC_XY_VEL_I_[2K
+pxh> param set MPC_XY_VEL_I_A[2K
+pxh> param set MPC_XY_VEL_I_AC[2K
+pxh> param set MPC_XY_VEL_I_ACC[2K
+pxh> param set MPC_XY_VEL_I_ACC [2K
+pxh> param set MPC_XY_VEL_I_ACC 0[2K
+pxh> param set MPC_XY_VEL_I_ACC 0.[2K
+pxh> param set MPC_XY_VEL_I_ACC 0.4
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_X[2K
+pxh> param set MPC_XY[2K
+pxh> param set MPC_XY_[2K
+pxh> param set MPC_XY_V[2K
+pxh> param set MPC_XY_VE[2K
+pxh> param set MPC_XY_VEL[2K
+pxh> param set MPC_XY_VEL_[2K
+pxh> param set MPC_XY_VEL_D[2K
+pxh> param set MPC_XY_VEL_D_[2K
+pxh> param set MPC_XY_VEL_D_A[2K
+pxh> param set MPC_XY_VEL_D_AC[2K
+pxh> param set MPC_XY_VEL_D_ACC[2K
+pxh> param set MPC_XY_VEL_D_ACC [2K
+pxh> param set MPC_XY_VEL_D_ACC 0[2K
+pxh> param set MPC_XY_VEL_D_ACC 0.[2K
+pxh> param set MPC_XY_VEL_D_ACC 0.2
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_Z[2K
+pxh> param set MPC_Z_[2K
+pxh> param set MPC_Z_V[2K
+pxh> param set MPC_Z_VE[2K
+pxh> param set MPC_Z_VEL[2K
+pxh> param set MPC_Z_VEL_[2K
+pxh> param set MPC_Z_VEL_P[2K
+pxh> param set MPC_Z_VEL_P_[2K
+pxh> param set MPC_Z_VEL_P_A[2K
+pxh> param set MPC_Z_VEL_P_AC[2K
+pxh> param set MPC_Z_VEL_P_ACC[2K
+pxh> param set MPC_Z_VEL_P_ACC [2K
+pxh> param set MPC_Z_VEL_P_ACC 4[2K
+pxh> param set MPC_Z_VEL_P_ACC 4.[2K
+pxh> param set MPC_Z_VEL_P_ACC 4.0
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_Z[2K
+pxh> param set MPC_Z_[2K
+pxh> param set MPC_Z_V[2K
+pxh> param set MPC_Z_VE[2K
+pxh> param set MPC_Z_VEL[2K
+pxh> param set MPC_Z_VEL_[2K
+pxh> param set MPC_Z_VEL_I[2K
+pxh> param set MPC_Z_VEL_I_[2K
+pxh> param set MPC_Z_VEL_I_A[2K
+pxh> param set MPC_Z_VEL_I_AC[2K
+pxh> param set MPC_Z_VEL_I_ACC[2K
+pxh> param set MPC_Z_VEL_I_ACC [2K
+pxh> param set MPC_Z_VEL_I_ACC 2[2K
+pxh> param set MPC_Z_VEL_I_ACC 2.[2K
+pxh> param set MPC_Z_VEL_I_ACC 2.0
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param se[2K
+pxh> param set[2K
+pxh> param set [2K
+pxh> param set M[2K
+pxh> param set MP[2K
+pxh> param set MPC[2K
+pxh> param set MPC_[2K
+pxh> param set MPC_Z[2K
+pxh> param set MPC_Z_[2K
+pxh> param set MPC_Z_V[2K
+pxh> param set MPC_Z_VE[2K
+pxh> param set MPC_Z_VEL[2K
+pxh> param set MPC_Z_VEL_[2K
+pxh> param set MPC_Z_VEL_D[2K
+pxh> param set MPC_Z_VEL_D_[2K
+pxh> param set MPC_Z_VEL_D_A[2K
+pxh> param set MPC_Z_VEL_D_AC[2K
+pxh> param set MPC_Z_VEL_D_ACC[2K
+pxh> param set MPC_Z_VEL_D_ACC [2K
+pxh> param set MPC_Z_VEL_D_ACC 0[2K
+pxh> param set MPC_Z_VEL_D_ACC 0.[2K
+pxh> param set MPC_Z_VEL_D_ACC 0.0
+pxh> [2K
+pxh> p[2K
+pxh> pa[2K
+pxh> par[2K
+pxh> para[2K
+pxh> param[2K
+pxh> param [2K
+pxh> param s[2K
+pxh> param sa[2K
+pxh> param sav[2K
+pxh> param save
+pxh> INFO  [commander] Armed by external command	
+INFO  [tone_alarm] arming warning
+INFO  [commander] Takeoff detected	
+[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/ksql_airport[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/saucepan[0m[1;31m]
+[0m
+libcurl: (35) error:0A000126:SSL routines::unexpected eof while reading
+WARN  [failsafe] Failsafe activated	
+INFO  [tone_alarm] battery warning (fast)
+ERROR [flight_mode_manager] Matching flight task was not able to run, Nav state: 2, Task: 1
+INFO  [tone_alarm] notify negative
+INFO  [tone_alarm] battery warning (fast)
+INFO  [tone_alarm] notify negative
+INFO  [tone_alarm] battery warning (fast)
+[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/cinder_block_2[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/breakable_test[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/law_office[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/table[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/gimbal_small_2d[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/cafe_table[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/simple_gripper[0m[1;31m]
+[0m[1;31m[Err] [ModelDatabase.cc:394] [0m[1;31mUnable to get model name[[0m[1;31mhttp://models.gazebosim.org/frc2016_portcullis[0m[1;31m]
+[0m
+PX4 Exiting...
+[2K
+pxh> [1;33m[Wrn] [Event.cc:61] [0m[1;33mWarning: Deleting a connection right after creation. [0m[1;33mMake sure to save the ConnectionPtr from a Connect call
+[0mExiting NOW.
+ninja: build stopped: interrupted by user.
+make: *** [Makefile:232: px4_sitl] Interrupt

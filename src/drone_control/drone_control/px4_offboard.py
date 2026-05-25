@@ -37,11 +37,17 @@ class PX4OffboardController(Node):
         self.declare_parameter('target_system', 1)
         self.declare_parameter('arm_timeout', 10.0)
         self.declare_parameter('namespace', '/drone_0')
+        self.declare_parameter('auto_takeoff', True)
+        self.declare_parameter('takeoff_altitude', 2.0)
+        self.declare_parameter('setpoint_rate', 50.0)
         
         self.vehicle_id = self.get_parameter('vehicle_id').value
         self.target_system = self.get_parameter('target_system').value
         self.arm_timeout = self.get_parameter('arm_timeout').value
         self.namespace = self.get_parameter('namespace').value
+        self.auto_takeoff = self.get_parameter('auto_takeoff').value
+        self.takeoff_altitude = self.get_parameter('takeoff_altitude').value
+        self.setpoint_rate = self.get_parameter('setpoint_rate').value
         
         # QoS配置
         qos_profile = QoSProfile(
@@ -101,25 +107,36 @@ class PX4OffboardController(Node):
         
         # 无人机状态
         self.drone_state = DroneState()
+        self.have_vehicle_status = False
+        self.have_local_position = False
         
         # 定时器
         self.offboard_setpoint_counter = 0
-        self.timer = self.create_timer(0.01, self.timer_callback)  # 100Hz
+        timer_period = 1.0 / max(float(self.setpoint_rate), 2.0)
+        self.timer = self.create_timer(timer_period, self.timer_callback)
         
         # 目标值
-        self.target_position = np.array([0.0, 0.0, 0.0])
+        initial_z = -abs(float(self.takeoff_altitude)) if self.auto_takeoff else 0.0
+        self.target_position = np.array([0.0, 0.0, initial_z])
         self.target_velocity = np.array([0.0, 0.0, 0.0])
         self.target_yaw = 0.0
+        self.control_mode = 'position'
         
-        self.get_logger().info(f'PX4 Offboard Controller initialized (vehicle_id={self.vehicle_id})')
+        self.get_logger().info(
+            f'PX4 Offboard Controller initialized (vehicle_id={self.vehicle_id}, '
+            f'namespace={self.namespace}, auto_takeoff={self.auto_takeoff}, '
+            f'takeoff_altitude={self.takeoff_altitude:.1f}m)'
+        )
 
     def vehicle_status_callback(self, msg: VehicleStatus):
         """处理无人机状态"""
+        self.have_vehicle_status = True
         self.drone_state.is_armed = bool(msg.arming_state == VehicleStatus.ARMING_STATE_ARMED)
         self.drone_state.in_offboard_mode = bool(msg.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD)
 
     def local_position_callback(self, msg: VehicleLocalPosition):
         """处理本地位置"""
+        self.have_local_position = True
         self.drone_state.position = np.array([msg.x, msg.y, msg.z])
         self.drone_state.velocity = np.array([msg.vx, msg.vy, msg.vz])
 
@@ -130,6 +147,7 @@ class PX4OffboardController(Node):
             msg.linear.y,
             -msg.linear.z
         ])
+        self.control_mode = 'velocity'
         # 如果提供了角速度，转换yaw速率
         if msg.angular.z != 0:
             self.target_yaw += msg.angular.z * 0.01  # 0.01秒的增量
@@ -141,6 +159,7 @@ class PX4OffboardController(Node):
             msg.pose.position.y,
             -msg.pose.position.z
         ])
+        self.control_mode = 'position'
         
         # 从四元数提取yaw角
         qx = msg.pose.orientation.x
@@ -202,8 +221,8 @@ class PX4OffboardController(Node):
         # 发布Offboard控制模式
         offboard_mode = OffboardControlMode()
         offboard_mode.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        offboard_mode.position = True  # 位置控制
-        offboard_mode.velocity = False
+        offboard_mode.position = self.control_mode == 'position'
+        offboard_mode.velocity = self.control_mode == 'velocity'
         offboard_mode.acceleration = False
         offboard_mode.attitude = False
         offboard_mode.body_rate = False
@@ -215,8 +234,12 @@ class PX4OffboardController(Node):
         # 发布轨迹设置点
         trajectory = TrajectorySetpoint()
         trajectory.timestamp = offboard_mode.timestamp
-        trajectory.position = [float(x) for x in self.target_position]
-        trajectory.velocity = [float(x) for x in self.target_velocity]
+        if self.control_mode == 'position':
+            trajectory.position = [float(x) for x in self.target_position]
+            trajectory.velocity = [float('nan'), float('nan'), float('nan')]
+        else:
+            trajectory.position = [float('nan'), float('nan'), float('nan')]
+            trajectory.velocity = [float(x) for x in self.target_velocity]
         trajectory.acceleration = [float('nan'), float('nan'), float('nan')]
         trajectory.jerk = [float('nan'), float('nan'), float('nan')]
         trajectory.yaw = self.target_yaw
@@ -229,6 +252,14 @@ class PX4OffboardController(Node):
         
         # 每100次循环（1秒）检查一次状态
         if self.offboard_setpoint_counter % 100 == 0:
+            if not self.have_vehicle_status:
+                self.get_logger().warn(
+                    f'No PX4 vehicle_status received on '
+                    f'{self.namespace}/fmu/out/vehicle_status. Start PX4 SITL/Gazebo '
+                    f'or check the namespace before expecting arm/offboard.'
+                )
+                return
+
             if not self.drone_state.is_armed:
                 self.get_logger().warn('Drone is not armed!')
                 self.arm()
@@ -243,8 +274,14 @@ class PX4OffboardController(Node):
                     f'Position: [{self.drone_state.position[0]:.2f}, '
                     f'{self.drone_state.position[1]:.2f}, '
                     f'{self.drone_state.position[2]:.2f}], '
+                    f'Mode: {self.control_mode}, '
                     f'Armed: {self.drone_state.is_armed}, '
                     f'Offboard: {self.drone_state.in_offboard_mode}'
+                )
+            elif not self.have_local_position:
+                self.get_logger().warn(
+                    f'No PX4 local_position received on '
+                    f'{self.namespace}/fmu/out/vehicle_local_position yet.'
                 )
 
 
